@@ -32,19 +32,3 @@ my-portfolio/
 │   └── main.jsx      # React entry point
 ├── vite.config.js    # Deployment configurations
 └── tailwind.config.js # Custom styling rules
-
-### 📬 Get in Touch
-Made with ❤️ by Barsha Mondal
-
-# 🤝 Contributions
-Contributions are always welcome! If you want to help improve this project, feel free to:
-
-🐛 Report bugs or issues
-
-💡 Suggest new features or improvements
-
-📝 Fix typos or improve documentation
-
-👩‍💻 Submit pull requests with code enhancements
-
-Thank you for helping make this project better! 🙌
