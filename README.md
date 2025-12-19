@@ -3,7 +3,7 @@
 Hi! I'm **Barsha Mondal**, an Electronics and Communication (ECE) student at **National Institute of Technology, Jamshedpur**. This is my personal portfolio website where I showcase my journey in building scalable, robust user interfaces.
 
 ### 🔗 Live Demo
-[View my live portfolio here!](https://vercel.com/barshas-projects-d9a38869/my-portfolio-qk9c/D6GU7oVZ67NAG3Jg8KtCgjiQG7rp)
+[View my live portfolio here!](https://my-portfolio-qk9c.vercel.app/#contact)
 
 ---
 
