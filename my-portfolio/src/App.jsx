@@ -8,6 +8,7 @@ import guessImg from './assets/banner.png';
 import clock from './assets/digital-clock.jpg';
 import paint from './assets/color.jpg';
 import old from './assets/memory.webp';
+import profilePic from './assets/me.jpeg';
 
 const PROJECTS = [
   {
@@ -81,53 +82,77 @@ const App = () => {
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <section className="max-w-6xl  px-6 pt-16 pb-12 text-left">
-        <h2 className="text-5xl md:text-7xl font-extrabold mb-6 leading-tight text-gray-900">
-          Developing scalable  <span className="text-blue-600  ">and robust user interfaces</span>
-        </h2>
-        <p className="text-xl text-gray-600 mb-8 max-w-2xl ">
-          Hi, I'm Barsha Mondal. I am a driven Electronics and Communication (ECE) Branch student at National Institute Of Technology, Jamshedpur(Jharkhand), currently pursuing my Bachelor Of Technology(B.Tech). My academic journey has provided me with a solid foundation in core engineering principles, while my passion for modern web development has led me to master React, JavaScript, Tailwind CSS, HTML, Modern APIs ,Backend(Node.js, Express.js) and Databases.
-I specialize in building responsive, high-performance web applications that bridge the gap between complex backend logic and intuitive user interfaces. Further, I am proficient in English , Hindi and Bengali . I am constantly looking for opportunities to apply my technical skills to solve real-world problems and contribute to innovative digital solutions.".
-        </p>
-      </section>
-
-      <section id="projects" className="max-w-5xl mx-auto px-6 py-12">
-  <h3 className="text-2xl font-bold mb-8 text-gray-800">Selected Work & Projects </h3>
-  
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-    {PROJECTS.map((project, index) => (
-      <div key={index} className="group bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
-        {/* Project Image */}
-        <img src={project.image} alt={project.title} className="w-full h-48 object-cover border-b" />
+      {/* --- HERO SECTION START --- */}
+      <section className="max-w-7xl mx-auto px-6 pt-10 pb-20 flex flex-col md:flex-row items-center justify-between gap-12">
         
-        <div className="p-6">
-          <h4 className="text-xl font-bold mb-2 group-hover:text-blue-600 transition-colors">
-            {project.title}
-          </h4>
-          <p className="text-gray-600 mb-4 text-sm leading-relaxed">
-            {project.description}
-          </p>
-          
-          {/* Tags */}
-          <div className="flex flex-wrap gap-2 mb-6">
-            {project.tags.map((tag, tagIndex) => (
-              <span key={tagIndex} className="text-[10px] uppercase tracking-wider font-bold px-2 py-1 bg-blue-50 text-blue-600 rounded">
-                {tag}
-              </span>
-            ))}
+        {/* LEFT SIDE: Text Content */}
+        <div className="flex-1">
+          <h2 className="text-5xl md:text-7xl font-extrabold mb-6 leading-[1.1] text-blue-900">
+            Build. Scale. Design. <br className="hidden md:block" />
+            
+          </h2>
+          {/* Shifting the paragraph slightly right as you requested before */}
+          <div className="max-w-xl text-center ml-12">
+            <p className="text-lg text-gray-600 leading-relaxed">
+              Hi, I'm <span className="font-bold text-gray-900">Barsha Mondal</span>. I am a driven Electronics and Communication (ECE) 
+      Branch student at National Institute Of Technology, Jamshedpur (Jharkhand), 
+      currently pursuing my Bachelor Of Technology (B.Tech). My academic 
+      journey has provided me with a solid foundation in core engineering 
+      principles, while my passion for modern web development has led me to 
+      master React, JavaScript, Tailwind CSS, HTML, Modern APIs, 
+      Backend (Node.js, Express.js) and Databases. I specialize in building 
+      responsive, high-performance web applications that bridge the gap 
+      between complex backend logic and intuitive user interfaces. Further, I am 
+      proficient in English, Hindi and Bengali. I am constantly looking for 
+      opportunities to apply my technical skills to solve real-world problems and 
+      contribute to innovative digital solutions.
+            </p>
+            
+            
           </div>
-
-          <a href={project.link} target="_blank" rel="noreferrer" className="inline-flex items-center text-sm font-semibold text-blue-600 hover:underline">
-            View Project on GitHub →
-          </a>
         </div>
-      </div>
-    ))}
-  </div>
-</section>
-    </div>
+
+        {/* RIGHT SIDE: Your Photo */}
+        <div className="flex-shrink-0">
+          <div className="relative">
+            {/* Soft glow behind the image */}
+            <div className="absolute -inset-4 bg-blue-100 rounded-full blur-2xl opacity-60"></div>
+            <img 
+              src={profilePic} 
+              alt="Barsha Mondal" 
+              className="relative w-72 h-72 md:w-96 md:h-96 object-cover rounded-3xl shadow-2xl border-4 border-white transition-transform hover:scale-105 duration-300"
+            />
+          </div>
+        </div>
+
+      </section> 
+      {/* --- HERO SECTION END --- */}
+
+      
+      {/* --- PROJECTS SECTION (THE ONE THAT DISAPPEARED) --- */}
+      <section id="projects" className="max-w-7xl mx-auto px-6 py-16 bg-gray-50 rounded-3xl">
+        <h3 className="text-3xl font-bold mb-10 text-gray-800 text-center">Selected Work & Projects</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {PROJECTS.map((project, index) => (
+            <div key={index} className="group bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 hover:shadow-xl transition-all">
+              <img src={project.image} alt={project.title} className="w-full h-48 object-cover" />
+              <div className="p-6">
+                <h4 className="text-xl text-centre font-bold mb-2 group-hover:text-blue-600">{project.title}</h4>
+                <p className="text-gray-600 text-sm mb-4 leading-relaxed">{project.description}</p>
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {project.tags.map((tag, tagIndex) => (
+                    <span key={tagIndex} className="text-[10px] uppercase tracking-wider font-bold px-2 py-1 bg-gray-100 rounded-md">{tag}</span>
+                  ))}
+                </div>
+                <a href={project.link} target="_blank" rel="noreferrer" className="text-blue-600 font-bold hover:underline">View Project on GitHub →</a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+    </div> // Closes main div
   );
 };
+   
 
 export default App;
