@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Color Changer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            transition: background-color 0.3s ease;
+            background-color: #f0f0f0;
+        }
+        
+        .container {
+            text-align: center;
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 1.5rem;
+        }
+        
+        #colorButton {
+            background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            outline: none;
+        }
+        
+        #colorButton:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        #colorButton:active {
+            transform: translateY(0);
+        }
+        
+        .color-info {
+            margin-top: 1rem;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Background Color Changer</h1>
+        <button id="colorButton">Change Background Color</button>
+        <div class="color-info" id="colorInfo">Current color: Light Gray</div>
+    </div>
+
+    <script>
+        const button = document.getElementById('colorButton');
+        const body = document.body;
+        const colorInfo = document.getElementById('colorInfo');
+        
+        // Array of colors to cycle through
+        const colors = [
+            { color: '#ff6b6b', name: 'Coral Red' },
+            { color: '#4ecdc4', name: 'Turquoise' },
+            { color: '#45b7d1', name: 'Sky Blue' },
+            { color: '#96ceb4', name: 'Mint Green' },
+            { color: '#feca57', name: 'Golden Yellow' },
+            { color: '#ff9ff3', name: 'Pink' },
+            { color: '#54a0ff', name: 'Blue' },
+            { color: '#5f27cd', name: 'Purple' },
+            { color: '#00d2d3', name: 'Cyan' },
+            { color: '#ff9f43', name: 'Orange' },
+            { color: '#f0f0f0', name: 'Light Gray' }
+        ];
+        
+        let currentColorIndex = colors.length - 1; // Start with light gray
+        
+        button.addEventListener('click', function() {
+            // Move to next color
+            currentColorIndex = (currentColorIndex + 1) % colors.length;
+            
+            // Apply the new background color
+            body.style.backgroundColor = colors[currentColorIndex].color;
+            
+            // Update the color info
+            colorInfo.textContent = `Current color: ${colors[currentColorIndex].name}`;
+            
+            // Add a little animation effect to the button
+            button.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                button.style.transform = 'scale(1)';
+            }, 100);
+        });
+        
+        // Optional: Change color on spacebar press
+        document.addEventListener('keydown', function(event) {
+            if (event.code === 'Space') {
+                event.preventDefault();
+                button.click();
+            }
+        });
+    </script>
+</body>
+</html>
