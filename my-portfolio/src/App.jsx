@@ -161,7 +161,7 @@ const App = () => {
 </div>
       {/* Navigation */}
       <nav className=" p-6 flex justify-between items-center bg-black/30 backdrop-blur-lg border-b border-white/10 shadow-sm sticky px-8 py-5 top-0 z-10">
-        <h1 className="text-xl font-bold tracking-tighter"> ✨ MY PORTFOLIO ✨</h1>
+        <h1 className="text-xl font-bold tracking-tighter">  MY PORTFOLIO </h1>
         <div className="space-x-6">
           <a href="#projects" className="hover:text-blue-600 transition">Projects</a>
           <a href="#contact" className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Contact</a>
@@ -293,6 +293,7 @@ const App = () => {
   "Tailwind CSS",
   "Vite",
   "Node.js",
+  "PHP",
   "Express.js",
   "MongoDB",
   "MySQL",
