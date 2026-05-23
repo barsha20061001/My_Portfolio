@@ -22,6 +22,7 @@ const PROJECTS = [
     description: "BMI Calculator is a simple and handy web tool built with HTML, CSS, and JavaScript that helps you quickly calculate your Body Mass Index (BMI) . Just input your height and weight , and the calculator instantly tells you your BMI value along with a health category — whether you're underweight, normal, overweight, or obese .",
     tags: ["JavaScript", "CSS", "HTML"],
     link: "https://github.com/barsha20061001/BMI-calculator",
+    live: "https://barsha20061001.github.io/BMI-calculator/",
     image: BMIimg // Replace with your screenshot later
   },
   {
@@ -29,6 +30,7 @@ const PROJECTS = [
     description: "Real-time weather tracking using OpenWeather API. It lets users search for any city and view real-time 🌡️ weather data including temperature, humidity, wind speed, and conditions — all with a clean and mobile-friendly UI.",
     tags: ["JavaScript", "React", "OpenWeather API", " Tailwind CSS" , "Vite"],
     link: "https://github.com/barsha20061001/weather-web-app",
+    live: "https://weather-app-tznv.vercel.app/",
     image: weatherImg
   },
 
@@ -37,6 +39,7 @@ const PROJECTS = [
     description: " Guess the Number is a fun and interactive browser-based game built using HTML, CSS, and JavaScript. The objective is simple: the player must guess a randomly generated number between 1 and 100.",
     tags: ["JavaScript", "CSS" , "HTML"],
     link: "https://github.com/barsha20061001/Guess-The-Number",
+    live: "https://barsha20061001.github.io/Guess-The-Number/",
     image: guessImg
   },
 
@@ -45,6 +48,7 @@ const PROJECTS = [
     description: " Digital Clock is a simple and stylish real-time clock built using HTML, CSS, and JavaScript. It displays the current time in a 12-hour or 24-hour format , updating every second to stay accurate down to the second .",
     tags: ["JavaScript", "CSS" , "HTML"],
     link: "https://github.com/barsha20061001/Digital-Clock?tab=readme-ov-file",
+    live: "https://barsha20061001.github.io/Digital-Clock/",
     image: clock
   },
 
@@ -53,6 +57,7 @@ const PROJECTS = [
     description: "A sleek and modern Password Generator built with React, Vite, and Tailwind CSS. This web app allows users to create strong, secure, and customizable passwords instantly — perfect for enhancing online security and privacy.",
     tags: [ "JavaScript"," CSS","Browser APIs", "HTML"],
     link: "https://github.com/barsha20061001/color-changer-.",
+    live: "https://barsha20061001.github.io/color-changer-./",
     image: paint
   },
 
@@ -61,6 +66,7 @@ const PROJECTS = [
     description: "A sleek and modern Password Generator built with React, Vite, and Tailwind CSS. This web app allows users to create strong, secure, and customizable passwords instantly — perfect for enhancing online security and privacy.",
     tags: ["React UI", "JavaScript","Tailwind CSS","Vite", "HTML"],
     link: "https://github.com/barsha20061001/password-generator",
+    live: "https://basic-yssf.vercel.app/",
     image: passwordImg
   },
 
@@ -69,6 +75,7 @@ const PROJECTS = [
     description: "Memory Lane is a full-stack web application that allows users to create digital time capsules. Users can store their thoughts, select themes, and set a reveal date to preserve memories for the future.",
     tags: ["React.js", "JavaScript","Tailwind CSS","Vite", "Axios", "Node.js","Express.js"],
     link: "https://github.com/barsha20061001/Memory-Lane-Digital-Capsule-",
+    live: "https://memory-lane-digital-capsule.vercel.app/",
     image: old
   }
 
@@ -272,6 +279,14 @@ const App = () => {
                   ))}
                 </div>
                 <a href={project.link} target="_blank" rel="noreferrer" className="inline-block mt-4 bg-gradient-to-r from-yellow-400 to-amber-500 text-black px-5 py-2 rounded-full font-bold hover:scale-105 transition duration-300">View Project on GitHub →</a>
+                <a
+  href={project.live}
+  target="_blank"
+  rel="noreferrer"
+  className="inline-block mt-4 ml-3 border border-cyan-400 text-cyan-400 px-5 py-2 rounded-full font-bold hover:bg-cyan-400 hover:text-black transition duration-300"
+>
+  Live Demo
+</a>
               </div>
             </div>
           ))}
