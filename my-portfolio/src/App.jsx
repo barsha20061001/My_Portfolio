@@ -72,10 +72,10 @@ const PROJECTS = [
 
 const App = () => {
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-900 font-sans">
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-blue-950 to-black text-white">
       {/* Navigation */}
-      <nav className="p-6 flex justify-between items-center bg-white shadow-sm sticky top-0 z-10">
-        <h1 className="text-xl font-bold tracking-tighter"> 🚀✨ MY PORTFOLIO ✨🚀</h1>
+      <nav className=" p-6 flex justify-between items-center bg-black/30 backdrop-blur-lg border-b border-white/10 shadow-sm sticky px-8 py-5 top-0 z-10">
+        <h1 className="text-xl font-bold tracking-tighter"> ✨ MY PORTFOLIO ✨</h1>
         <div className="space-x-6">
           <a href="#projects" className="hover:text-blue-600 transition">Projects</a>
           <a href="#contact" className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Contact</a>
@@ -87,26 +87,47 @@ const App = () => {
         
         {/* LEFT SIDE: Text Content */}
         <div className="flex-1">
-          <h2 className="text-5xl md:text-7xl font-extrabold mb-6 leading-[1.1] text-blue-900">
+          <h2 className="text-5xl md:text-7xl font-extrabold mb-6 leading-[1.1] text-white-900">
             Build. Scale. Design. <br className="hidden md:block" />
             
           </h2>
           {/* Shifting the paragraph slightly right as you requested before */}
           <div className="max-w-xl text-center ml-12">
-            <p className="text-lg text-gray-600 leading-relaxed">
-              Hi, I'm <span className="font-bold text-gray-900">Barsha Mondal</span>. I am a driven Electronics and Communication (ECE) 
-      Branch student at National Institute Of Technology, Jamshedpur (Jharkhand), 
-      currently pursuing my Bachelor Of Technology (B.Tech). My academic 
-      journey has provided me with a solid foundation in core engineering 
-      principles, while my passion for modern web development has led me to 
-      master React, JavaScript, Tailwind CSS, HTML, Modern APIs, 
-      Backend (Node.js, Express.js) and Databases. I specialize in building 
-      responsive, high-performance web applications that bridge the gap 
-      between complex backend logic and intuitive user interfaces. Further, I am 
-      proficient in English, Hindi and Bengali. I am constantly looking for 
-      opportunities to apply my technical skills to solve real-world problems and 
-      contribute to innovative digital solutions.
-            </p>
+            <p className="text-lg text-white-700 leading-relaxed max-w-2xl">
+  Hi, I'm <span className="font-bold">Barsha Mondal</span> — an
+  Electronics & Communication Engineering student at NIT Jamshedpur
+  and a passionate Full Stack Web Developer.
+
+  I build responsive, modern and user-friendly web applications using
+  React, JavaScript, Tailwind CSS, Node.js and MongoDB.
+
+  I enjoy creating clean UI designs, scalable backend systems and
+  impactful real-world projects.
+</p>
+<div className="flex gap-4 mt-8 flex-wrap">
+  <a
+    href="#projects"
+    className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-semibold transition"
+  >
+    View Projects
+  </a>
+
+  <a
+    href="https://github.com/barsha20061001"
+    target="_blank"
+    className="border border-white px-6 py-3 rounded-xl font-semibold hover:bg-black hover:text-white transition"
+  >
+    GitHub
+  </a>
+
+  <a
+    href="https://www.linkedin.com/in/barsha-mondal-5aa83a325"
+    target="_blank"
+    className="border border-blue-600 text-blue-600 px-6 py-3 rounded-xl font-semibold hover:bg-blue-600 hover:text-white transition"
+  >
+    LinkedIn
+  </a>
+</div>
             
             
           </div>
@@ -128,29 +149,113 @@ const App = () => {
       </section> 
       {/* --- HERO SECTION END --- */}
 
+      <section id="skills" className="py-20 px-8 bg-transparent ">
+  <h2 className="text-5xl font-extrabold text-center mb-12 text-yellow"> My Skills</h2>
+
+  <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto text-black">
+    {[
+      "HTML",
+  "CSS",
+  "JavaScript",
+  "TypeScript",
+  "React",
+  "Next.js",
+  "Tailwind CSS",
+  "Vite",
+  "Node.js",
+  "Express.js",
+  "MongoDB",
+  "MySQL",
+  "Python",
+  "C++",
+  "C",
+  "Git",
+  "GitHub",
+  "VS Code",
+  "Vercel",
+  "Render",
+  "Figma"
+      
+      
+    ].map((skill) => (
+      <div
+        key={skill}
+        className="p-5 rounded-2xl shadow-md text-center font-semibold bg-gray-50 hover:bg-blue-600 hover:text-white hover:scale-105 transition"
+      >
+        {skill}
+      </div>
+    ))}
+  </div>
+</section>
+
       
       {/* --- PROJECTS SECTION (THE ONE THAT DISAPPEARED) --- */}
-      <section id="projects" className="max-w-7xl mx-auto px-6 py-16 bg-gray-50 rounded-3xl">
-        <h3 className="text-3xl font-bold mb-10 text-gray-800 text-center">Selected Work & Projects</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <section id="projects" className="max-w-7xl mx-auto px-6 py-16 bg-transparent text-white rounded-3xl">
+        <h3  className="text-5xl md:text-6xl font-extrabold text-center mb-24 py-6 bg-gradient-to-r from-yellow-300 to-amber-500 bg-clip-text text-transparent leading-relaxed"
+>Selected Work & Projects</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
           {PROJECTS.map((project, index) => (
-            <div key={index} className="group bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 hover:shadow-xl transition-all">
-              <img src={project.image} alt={project.title} className="w-full h-48 object-cover" />
+            <div
+  key={index}
+  className="group bg-white/5 backdrop-blur-lg border-2 border-yellow-400/20 rounded-3xl overflow-hidden hover:scale-105 hover:border-yellow-400 hover:shadow-yellow-500/30 hover:shadow-2xl transition duration-300"
+>
+              <img src={project.image} alt={project.title} className="w-full h-48 object-cover group-hover:scale-110 transition duration-500" />
               <div className="p-6">
-                <h4 className="text-xl text-centre font-bold mb-2 group-hover:text-blue-600">{project.title}</h4>
-                <p className="text-gray-600 text-sm mb-4 leading-relaxed">{project.description}</p>
+                <h4 className="text-2xl font-bold mb-3 text-white group-hover:text-yellow-300 transition">{project.title}</h4>
+                <p className="text-white-600 text-sm mb-4 leading-relaxed">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.tags.map((tag, tagIndex) => (
-                    <span key={tagIndex} className="text-[10px] uppercase tracking-wider font-bold px-2 py-1 bg-gray-100 rounded-md">{tag}</span>
+                    <span key={tagIndex} className="text-[10px] uppercase tracking-wider font-bold px-3 py-1 bg-white text-black rounded-full border border-white">{tag}</span>
                   ))}
                 </div>
-                <a href={project.link} target="_blank" rel="noreferrer" className="text-blue-600 font-bold hover:underline">View Project on GitHub →</a>
+                <a href={project.link} target="_blank" rel="noreferrer" className="inline-block mt-4 bg-gradient-to-r from-yellow-400 to-amber-500 text-black px-5 py-2 rounded-full font-bold hover:scale-105 transition duration-300">View Project on GitHub →</a>
               </div>
             </div>
           ))}
         </div>
       </section>
-    </div> // Closes main div
+
+      <section
+  id="contact"
+  className="py-24 px-8 text-white text-center"
+>
+  <h2 className="text-5xl font-extrabold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+    Contact Me
+  </h2>
+
+  <p className="text-gray-300 max-w-2xl mx-auto mb-10 text-lg">
+    Interested in collaborating, internships, freelance projects or
+    opportunities! 
+     Let's connect.
+  </p>
+
+  <div className="flex justify-center gap-6 flex-wrap">
+    <a
+      href="mailto:barshadgp212@gmail.com"
+      className="bg-yellow-400 text-black px-6 py-3 rounded-full font-bold hover:scale-105 transition"
+    >
+      Email Me
+    </a>
+
+    <a
+      href="https://github.com/barsha20061001"
+      target="_blank"
+      className="border border-white px-6 py-3 rounded-full font-bold hover:bg-white hover:text-black transition"
+    >
+      GitHub
+    </a>
+
+    <a
+      href="https://www.linkedin.com/in/barsha-mondal-5aa83a325"
+      target="_blank"
+      className="border border-cyan-400 text-cyan-400 px-6 py-3 rounded-full font-bold hover:bg-cyan-400 hover:text-black transition"
+    >
+      LinkedIn
+    </a>
+  </div>
+</section>
+
+    </div> // Closes main div 
   );
 };
    
