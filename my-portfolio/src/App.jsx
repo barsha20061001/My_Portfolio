@@ -14,9 +14,73 @@ import guessImg from './assets/banner.png';
 import clock from './assets/digital-clock.jpg';
 import paint from './assets/color.jpg';
 import old from './assets/memory.webp';
+import book from './assets/book.jpeg';
+import blog from './assets/blog.jpeg';
+import gig from './assets/gig2.png';
+import vote from './assets/vote.jpg';
+import school from './assets/school.png';
+import lead from './assets/lead.png';
+
 import profilePic from './assets/me.jpeg';
 
 const PROJECTS = [
+
+  {
+  title: " Blog Management System ",
+  description: "A full-featured blog management platform that allows users to create, manage, and explore blogs through a clean and responsive interface. Designed to simplify content publishing while providing an organized reading experience for users and admins.", 
+  tags: ["PHP", "MySQL", "HTML5","JavaScript", "CSS3", "jQuery","AJAX", "CKEditor", "InfinityFree Hosting"],
+  link: "https://github.com/barsha20061001/Blog-management-system",
+  live: "https://barshablog.infinityfreeapp.com/?i=1",
+  image: blog // Replace with your screenshot later
+},
+
+{
+  title: " GigFlow - Smart Leads Dashboard",
+  description: "A freelance collaboration platform that connects clients and freelancers through project posting and bid-based hiring. It helps streamline project management, improve communication, and simplify the process of finding suitable talent for different tasks.",
+  tags: ["Frontend : React, TypeScript, TailwindCSS, Vite", "Backend: Node.js, Express, TypeScript, MongoDB, Mongoose", "Backend: Node.js, Express, TypeScript, MongoDB, Mongoose","DevOps : Docker Compose, Vercel, Render, MongoDB Atlas"],
+  link: "https://github.com/barsha20061001/gigflow",
+  live: "https://gigflow-client-indol.vercel.app/",
+  image: gig // Replace with your screenshot later
+},
+
+{
+  title: "Lead Distribution System",
+  description: "An automated lead management system that intelligently distributes incoming leads among agents while preventing duplicate assignments and ensuring balanced allocation. It improves workflow efficiency, enhances team coordination, and simplifies real-time lead tracking.",
+  tags: ["Frontend : Next.js + React + Tailwind CSS", "Backend  : Next.js + API + Routes", "Database : MongoDB + Atlas", "Deployment : Vercel"],
+  link: "https://github.com/barsha20061001/lead-distribution-system",
+  live: "https://lead-distribution-system-xi.vercel.app/",
+  image: lead // Replace with your screenshot later
+},
+
+{
+  title: "Real-Time Expert Session Booking System",
+  description: "It is a real-time expert session booking system where users can search experts, view available slots, and book sessions easily.It is useful for preventing double bookings, updating slots in real time, and helping users track their booking status smoothly. ",
+  tags: ["Frontend: React (Vite), JavaScript, CSS , HTML ", "Backend: Node.js + Express + MongoDB", "Realtime: Socket.io"],
+  link: "https://github.com/barsha20061001/vedaz",
+  live: "https://vedaz-frontend.onrender.com/",
+  image: book // Replace with your screenshot later
+},
+
+{
+  title: "School Management API",
+  description: "A backend API system designed to manage school-related operations such as student records, classes, and data handling efficiently. It helps streamline school management processes by providing organized data access, scalable API endpoints, and easier integration with frontend applications. ",
+  tags: ["JavaScript", "Node.js", "Express.js", "MySQL", "Render", "Postman" , "dotenv"],
+  link: "https://github.com/barsha20061001/school-management-api",
+  live: "https://school-management-api-lioh.onrender.com",
+  image: school // Replace with your screenshot later
+},
+
+
+
+{
+  title: " VoteAble  ",
+  description: "Traditional digital voting systems often fail to accommodate voters with disabilities, elderly users, and first-time voters. The goal of this project is to design and implement a secure, inclusive, and accessible voting platform that adapts its interface and interaction methods based on individual user needs, ensuring equal participation for all citizens. ",
+  tags: ["Frontend : React(Vite) , React Router , Tailwind CSS , Web Speech API (Speech Synthesis & Recognition)", "Backend : Node.js , Express.js , MongoDB Atlas , Mongoose"],
+  link: "https://github.com/barsha20061001/GFGBQ-Team-vibe123",
+  live: "https://gfgbq-team-vibe123-1.onrender.com/",
+  image: vote // Replace with your screenshot later
+},
+
   {
     title: " BMI-calculator  ",
     description: "BMI Calculator is a simple and handy web tool built with HTML, CSS, and JavaScript that helps you quickly calculate your Body Mass Index (BMI) . Just input your height and weight , and the calculator instantly tells you your BMI value along with a health category — whether you're underweight, normal, overweight, or obese .",
@@ -25,9 +89,10 @@ const PROJECTS = [
     live: "https://barsha20061001.github.io/BMI-calculator/",
     image: BMIimg // Replace with your screenshot later
   },
+
   {
     title: " Weather App ",
-    description: "Real-time weather tracking using OpenWeather API. It lets users search for any city and view real-time 🌡️ weather data including temperature, humidity, wind speed, and conditions — all with a clean and mobile-friendly UI.",
+    description: "Real-time weather tracking using OpenWeather API. It lets users search for any city and view real-time weather data including temperature, humidity, wind speed, and conditions — all with a clean and mobile-friendly UI.",
     tags: ["JavaScript", "React", "OpenWeather API", " Tailwind CSS" , "Vite"],
     link: "https://github.com/barsha20061001/weather-web-app",
     live: "https://weather-app-tznv.vercel.app/",
