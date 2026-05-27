@@ -20,10 +20,20 @@ import gig from './assets/gig2.png';
 import vote from './assets/vote.jpg';
 import school from './assets/school.png';
 import lead from './assets/lead.png';
+import ai from './assets/ai.png';
 
 import profilePic from './assets/me.jpeg';
 
 const PROJECTS = [
+
+  {
+title: " StackSaver AI ",
+description: "StackSaver AI is an AI spend audit platform built for startups, engineering teams, and growing SaaS companies. It analyzes AI tooling usage, detects unnecessary spending, and provides actionable optimization recommendations to reduce infrastructure and subscription costs. The platform also includes benchmark comparisons, shareable reports, and lead-capture workflows for high-savings opportunities." ,
+tags: ["Frontend : Next.js 15, React , TypeScript ,Tailwind CSS", "Backend / Database : Supabase", "Testing : Vitest", "CI/CD : GitHub Actions" , "Deployment: Vercel"],
+link: "https://github.com/barsha20061001/AI-Spend-Audit",
+live: "https://ai-spend-audit-sigma-navy.vercel.app/",
+image: ai // Replace with your screenshot later
+ },
 
   {
   title: " Blog Management System ",
@@ -32,7 +42,7 @@ const PROJECTS = [
   link: "https://github.com/barsha20061001/Blog-management-system",
   live: "https://barshablog.infinityfreeapp.com/?i=1",
   image: blog // Replace with your screenshot later
-},
+   },
 
 {
   title: " GigFlow - Smart Leads Dashboard",
