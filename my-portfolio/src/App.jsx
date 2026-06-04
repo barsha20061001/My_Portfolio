@@ -21,10 +21,22 @@ import vote from './assets/vote.jpg';
 import school from './assets/school.png';
 import lead from './assets/lead.png';
 import ai from './assets/ai.png';
+import dt from './assets/dt.png';
+import form from './assets/form.png';
+import rat from './assets/rat.png';
+
 
 import profilePic from './assets/me.jpeg';
 
 const PROJECTS = [
+{
+  title: " AI Influencer Intelligence Engine ",
+description: "An AI-powered influencer analysis platform that evaluates influencer profiles, calculates performance scores, and recommends suitable brand collaborations. The system analyzes engagement, audience demographics, authenticity, growth trends, and niche relevance to generate actionable insights for brands and marketers.",
+tags: ["Frontend : React.js, Vite, JavaScript, CSS", "Backend: Python, FastAPI, Uvicorn", "Data & AI : Pandas, NumPy, Scikit-Learn" , "Deployment : Vercel, Render, GitHub"],
+link: "https://github.com/barsha20061001/-AI-Influencer-Intelligence-Engine",
+live: "https://ai-influencer-intelligence-engine.vercel.app/",
+image: rat // Replace with your screenshot later
+ },
 
   {
 title: " StackSaver AI ",
@@ -63,6 +75,17 @@ image: ai // Replace with your screenshot later
 },
 
 {
+  title: "Student Enrollment Form",
+  description: "Student Enrollment Form is a web-based application developed using HTML, CSS, and JavaScript with JsonPowerDB as the backend database. The application allows users to add, update, and manage student enrollment records through an interactive form interface. The project demonstrates the use of JsonPowerDB for performing CRUD operations and implementing form validation with a user-friendly interface.",
+  tags: ["JavaScript", "HTML" ,"CSS", "JsonPowerDB"],
+  link: "https://github.com/barsha20061001/Student-Enrollment-Form-Using-JsonPowerDB",
+  live: "https://effulgent-moonbeam-206d20.netlify.app/",
+  image: form // Replace with your screenshot later
+},
+
+
+
+{
   title: "Real-Time Expert Session Booking System",
   description: "It is a real-time expert session booking system where users can search experts, view available slots, and book sessions easily.It is useful for preventing double bookings, updating slots in real time, and helping users track their booking status smoothly. ",
   tags: ["Frontend: React (Vite), JavaScript, CSS , HTML ", "Backend: Node.js + Express + MongoDB", "Realtime: Socket.io"],
@@ -70,6 +93,8 @@ image: ai // Replace with your screenshot later
   live: "https://vedaz-frontend.onrender.com/",
   image: book // Replace with your screenshot later
 },
+
+
 
 {
   title: "School Management API",
@@ -80,6 +105,13 @@ image: ai // Replace with your screenshot later
   image: school // Replace with your screenshot later
 },
 
+{
+  title: "DT Trinethra Analyzer",
+  description: "DT Trinethra Analyzer is an AI-powered application that evaluates supervisor feedback transcripts and generates structured performance insights for fellows. The system extracts evidence, maps observations to KPIs, identifies performance gaps, and produces follow-up questions using a locally running LLM. It is designed to support consistent, transparent, and domain-aware evaluation of workplace performance reviews.",
+  tags: ["JavaScript", "Node.js", "Express.js", "MySQL", "Render", "Postman" , "dotenv"],
+  link: "https://github.com/barsha20061001/dt-trinethra-analyzer",
+  image: dt // Replace with your screenshot later
+},
 
 
 {
